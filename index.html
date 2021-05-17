@@ -8,6 +8,7 @@
       content: '$';
     }
   </style>
+  <link rel="stylesheet" href="css/successtick.css">
 </head>
 <body>
 <div class="container-fluid">
@@ -244,47 +245,84 @@
     </div>
     <div class="col">
       <h4>Summary</h4>
-      <div class="row">
-        <div class="col">Bid Price</div>
-        <div id="payment-percentage" class="col text-right">$0.9500 <i class="bi bi-caret-up-fill text-success"></i></div>
-      </div>
-      <div class="row">
-        <div class="col">Selected Contracts</div>
-        <div id="summary-selected" class="col text-right"></div>
-      </div>
-      <div class="row">
-        <div class="col">Amount</div>
-        <div id="summary-amount" class="col text-right currency">0</div>
-      </div>
-      <div class="row">
-        <div class="col"><input id="summary-slider" type="range" class="form-range" id="customRange1"></div>
-      </div>
-      <div class="row">
+      <div id="payout-configure">
+        <div class="row">
+          <div class="col">Bid Price</div>
+          <div id="payment-percentage" class="col text-right">$0.9500 <i class="bi bi-caret-up-fill text-success"></i></div>
+        </div>
+        <div class="row">
+          <div class="col">Selected Contracts</div>
+          <div id="summary-selected" class="col text-right"></div>
+        </div>
+        <div class="row">
+          <div class="col">Amount</div>
+          <div id="summary-amount" class="col text-right currency">0</div>
+        </div>
+        <div class="row">
+          <div class="col"><input id="summary-slider" type="range" class="form-range" id="customRange1"></div>
+        </div>
+        <div class="row">
 
-        <div class="col" style="color: gray">
-          <span id="summary-slider-remaining" style="visibility: hidden"><span id="summary-slider-remaining-amount" class="currency">0</span> remaining trading limit</span>
-          <hr>
+          <div class="col" style="color: gray">
+            <span id="summary-slider-remaining" style="display: none"><span id="summary-slider-remaining-amount" class="currency">0</span> remaining trading limit</span>
+            <span id="summary-slider-info">Slide to select customers</span>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">Cancellations</div>
+          <div class="col text-right">($0.00)</div>
+        </div>
+        <div class="row">
+          <div class="col">Rampit Fee</div>
+          <div class="col text-right"><span id="summary-fee" class="currency" style="text-decoration: line-through">0</span> <span style="color: orange">Waived</span></div>
+        </div>
+        <div class="row">
+          <div class="col">Processing Time</div>
+          <div class="col text-right"><i class="bi bi-lightning-charge text-info"></i>Instant</div>
+        </div>
+        <div class="row">
+          <div class="col">Total Payout</div>
+          <div id="summary-total" class="col text-right currency">0</div>
+          <hr style="color: gray; margin-top: 20px">
+        </div>
+        <div class="row">
+          <div class="col">
+            <button id="summary-payout-btn" type="button" class="btn btn-primary btn-lg btn-block" style="width: 100%" disabled>
+              <span id="summary-payout-txt">Payout</span>
+              <span id="summary-payout-loading" style="display: none;">
+                <span>&nbsp;</span>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">Cancellations</div>
-        <div class="col text-right">($0.00)</div>
-      </div>
-      <div class="row">
-        <div class="col">Rampit Fee</div>
-        <div class="col text-right"><span id="summary-fee" class="currency" style="text-decoration: line-through">0</span> <span style="color: orange">Waived</span></div>
-      </div>
-      <div class="row">
-        <div class="col">Processing Time</div>
-        <div class="col text-right"><i class="bi bi-lightning-charge text-info"></i>Instant</div>
-      </div>
+      <div id="payout-success" style="display: none;">
+        <div class="row">
+          <div class="col">
+            <div class="swal-icon swal-icon--success">
+              <span class="swal-icon--success__line swal-icon--success__line--long"></span>
+              <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
 
-      <div class="row">
-        <div class="col">Total Payout</div>
-        <div id="summary-total" class="col text-right currency">0</div>
+              <div class="swal-icon--success__ring"></div>
+              <div class="swal-icon--success__hide-corners"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <h2>$153,656.15</h2>
+            Successfully Traded
+          </div>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+          <div class="col">Processing Time</div>
+          <div class="col text-right" style="text-align: right"><i class="bi bi-lightning-charge text-info"></i>Instant</div>
+        </div>
       </div>
-
     </div>
+
   </div>
 </div>
 <script>
@@ -407,6 +445,20 @@
     // setup values for slider
     summarySlider.value = 0;
     summarySlider.setAttribute('max', idx);
+
+    // setup button
+    document.querySelector('#summary-payout-btn').onclick = function() {
+      console.log('hello world');
+
+      document.querySelector('#summary-payout-txt').style.display = 'none';
+      document.querySelector('#summary-payout-loading').style.display = '';
+      setTimeout(function(){
+        console.log('Stuff be done'); //This will be delayed for one second
+        document.querySelector('#payout-configure').style.display = 'none';
+        document.querySelector('#payout-success').style.display = '';
+      }, 2500);
+
+    };
   }
 
   function updateSummary() {
@@ -435,12 +487,19 @@
     let totalAmount = paymentAmount + feeAmount;
     document.querySelector('#summary-total').textContent = utilFormatCurrencyAmount(totalAmount);
 
-    // hide/unhide remaining txt
+    // hide/unhide remaining txt and setup payout btn
     let ssr = document.querySelector('#summary-slider-remaining');
+    let ssi = document.querySelector('#summary-slider-info');
+    let spb = document.querySelector('#summary-payout-btn');
+
     if (checkboxesChecked.length == 0) {
-      ssr.style.visibility = 'hidden';
+      ssr.style.display = 'none';
+      ssi.style.display = '';
+      spb.disabled = true;
     } else {
-      ssr.style.visibility = '';
+      ssr.style.display = '';
+      ssi.style.display = 'none';
+      spb.disabled = false;
     }
 
     // setup remaining trading amount
