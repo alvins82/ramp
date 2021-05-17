@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b4987c2-5359-4b55-8654-8abbc6afd2e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/successtick.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
       <updated>1621215960725</updated>
       <workItem from="1621215962717" duration="932000" />
       <workItem from="1621216930942" duration="995000" />
-      <workItem from="1621221155645" duration="4526000" />
+      <workItem from="1621221155645" duration="5331000" />
     </task>
     <task id="LOCAL-00001" summary="- idea">
       <created>1621216994166</created>
@@ -61,7 +59,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621217128092</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- css">
+      <created>1621225929136</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621225929136</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +87,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- idea" />
     <MESSAGE value="- push" />
-    <option name="LAST_COMMIT_MESSAGE" value="- push" />
+    <MESSAGE value="- css" />
+    <option name="LAST_COMMIT_MESSAGE" value="- css" />
   </component>
 </project>

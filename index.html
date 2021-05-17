@@ -312,7 +312,7 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            <h2>$153,656.15</h2>
+            <h2 id="payout-success-amount" class="currency">0</h2>
             Successfully Traded
           </div>
         </div>
@@ -457,7 +457,6 @@
         document.querySelector('#payout-configure').style.display = 'none';
         document.querySelector('#payout-success').style.display = '';
       }, 2500);
-
     };
   }
 
@@ -486,6 +485,8 @@
     // setup total
     let totalAmount = paymentAmount + feeAmount;
     document.querySelector('#summary-total').textContent = utilFormatCurrencyAmount(totalAmount);
+    document.querySelector('#payout-success-amount').textContent = utilFormatCurrencyAmount(totalAmount);
+
 
     // hide/unhide remaining txt and setup payout btn
     let ssr = document.querySelector('#summary-slider-remaining');
