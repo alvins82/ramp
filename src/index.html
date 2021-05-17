@@ -1,0 +1,463 @@
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        .currency:before {
+            content: '$';
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Good afternoon John</h1>
+        <p class="lead">Ramp it.</p>
+        <ul class="list-unstyled" style="float: left;">
+            <li class="h6">Available ARR</li>
+            <li id="available-arr" class="currency"></li>
+        </ul>
+        <ul class="list-unstyled" style="float: left; margin-left: 50px; margin-right: 50px;">
+            <li class="h6">Remaining Trade Limit</li>
+            <li id="trading-lmt" class="currency"></li>
+        </ul>
+        <ul class="list-unstyled">
+            <li class="h6">Bid Price</li>
+            <li>$0.9500 <i class="bi bi-caret-up-fill text-success"></i></li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-9">
+            <h6>&nbsp;</h6>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Term Length</th>
+                    <th scope="col">Your Current Revenue</th>
+                    <th scope="col">Payout Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">vguillou0@sakura.ne.jp</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">207.99</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">phaydon2@geocities.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">594.68</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">czisneros6@marriott.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">890.09</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">srenals8@jiathis.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">1193.16</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">eguarniera@stumbleupon.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">458.81</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">hcecie@gmpg.org</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">471.99</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">wgleadhallg@devhub.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">1323.33</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">eboatrighti@deliciousdays.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">929.42</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">npohlkel@tinypic.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">559.44</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">oolagenex@bigcartel.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">851.99</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">twatheyz@oracle.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">546.07</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">blester10@mozilla.org</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">374.31</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">emacardle16@addtoany.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">831.02</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">hparmeter19@bizjournals.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">470.26</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">jabramamovh1c@istockphoto.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">705.51</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">aofarris1e@amazonaws.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">1214.83</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">fbatterton1f@yale.edu</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">1256.78</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">kwestrope1l@webs.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">559.44</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">bpahlsson1q@sitemeter.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">831.02</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">ddysert1r@digg.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">810.93</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">hnaughton1s@businessinsider.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">200.55</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">cdanniel1u@squidoo.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">259.06</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">lclaffey1v@ihg.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">938.07</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">mcasarili1z@nytimes.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">772.92</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">astead23@meetup.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">488.94</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">cvoelker27@bbc.co.uk</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">782.29</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                    <tr class="customer-details">
+                        <td><input type="checkbox" class="form-check-input mt-0 customer-select"></td>
+                        <th scope="row">arimington2a@typepad.com</th>
+                        <td>12 months</td>
+                        <td class="monthly-amount currency">819.25</td>
+                        <td class="payout-amount currency"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <h4>Summary</h4>
+            <div class="row">
+                <div class="col">Bid Price</div>
+                <div id="payment-percentage" class="col text-right">$0.9500 <i class="bi bi-caret-up-fill text-success"></i></div>
+            </div>
+            <div class="row">
+                <div class="col">Selected Contracts</div>
+                <div id="summary-selected" class="col text-right"></div>
+            </div>
+            <div class="row">
+                <div class="col">Amount</div>
+                <div id="summary-amount" class="col text-right currency">0</div>
+            </div>
+            <div class="row">
+                <div class="col"><input id="summary-slider" type="range" class="form-range" id="customRange1"></div>
+            </div>
+            <div class="row">
+
+                <div class="col" style="color: gray">
+                    <span id="summary-slider-remaining" style="visibility: hidden"><span id="summary-slider-remaining-amount" class="currency">0</span> remaining trading limit</span>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">Cancellations</div>
+                <div class="col text-right">($0.00)</div>
+            </div>
+            <div class="row">
+                <div class="col">Rampit Fee</div>
+                <div class="col text-right"><span id="summary-fee" class="currency" style="text-decoration: line-through">0</span> <span style="color: orange">Waived</span></div>
+            </div>
+            <div class="row">
+                <div class="col">Processing Time</div>
+                <div class="col text-right"><i class="bi bi-lightning-charge text-info"></i>Instant</div>
+            </div>
+
+            <div class="row">
+                <div class="col">Total Payout</div>
+                <div id="summary-total" class="col text-right currency">0</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    let maxMarginPercantage = 0.6;
+    let feePercentage = 0.01;
+
+    function setupTopLineAmounts() {
+        let totalValue = 0;
+        document.querySelectorAll('.payout-amount').forEach(function(td){
+            let currentRow = parseFloat(td.textContent);
+            totalValue += currentRow
+        });
+        document.querySelector('#available-arr').textContent = totalValue;
+
+        let trdlm = totalValue * maxMarginPercantage;
+        document.querySelector('#trading-lmt').textContent = trdlm;
+    }
+
+    function setupPayoutAmounts() {
+        document.querySelectorAll('.monthly-amount').forEach(function(td){
+            let stringWithoutDollar = td.textContent.replace(/\$/g, '');
+            let monthlyAmount = parseFloat(stringWithoutDollar);
+
+            stringWithoutDollar = document.querySelector('#payment-percentage').textContent.replace(/\$/g, '');
+            let percentageAmount = parseFloat(stringWithoutDollar);
+
+            let ntd = td.nextElementSibling;
+            let paymentAmount = monthlyAmount*12*percentageAmount;
+            ntd.textContent = paymentAmount;
+        });
+    }
+
+    function utilFormatCurrencyAmounts() {
+        document.querySelectorAll('.currency').forEach(function(td){
+            let currentRow = parseFloat(td.textContent);
+            td.textContent = utilFormatCurrencyAmount(currentRow);
+        });
+    }
+
+    function utilFormatCurrencyAmount(str) {
+        return str.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    function utilShuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    var shuffledCustomerDetails = [];
+    function setupSummary() {
+        // setup checkboxes
+        let checkboxes = document.querySelectorAll('.customer-select');
+        // Use Array.forEach to add an event listener to each checkbox.
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                updateSummary();
+            })
+        });
+
+        // setup slide
+        // - randomise the customer details iteration by shuffling
+        // - keep adding to pool until you go over the trading limit then back off 1
+        // - keeps this list for slider pool
+        let summarySlider = document.querySelector('#summary-slider');
+        summarySlider.addEventListener('input', function() {
+            // check the ones
+            let carray = Array.from(shuffledCustomerDetails).slice(0, summarySlider.value);
+            carray.forEach(function(customerdetails) {
+               let checkbox = customerdetails.querySelector('.customer-select');
+               checkbox.checked = true;
+            });
+
+            // clear the others
+            let oarray = Array.from(shuffledCustomerDetails).slice(summarySlider.value, shuffledCustomerDetails.length);
+            oarray.forEach(function(customerdetails) {
+                let checkbox = customerdetails.querySelector('.customer-select');
+                checkbox.checked = false;
+            });
+
+            updateSummary();
+        });
+
+        shuffledCustomerDetails = utilShuffle(Array.from(document.querySelectorAll('.customer-details')));
+
+        let trdlmel = document.querySelector('#trading-lmt');
+        let stringWithoutDollar = trdlmel.textContent.replace(/\,/g, '');
+        let trdlim = parseFloat(stringWithoutDollar);
+
+        let amount = 0;
+        let idx = 0;
+
+        for (let customerdetail of shuffledCustomerDetails) {
+            let pamountel = customerdetail.querySelector('.payout-amount');
+
+            let stringWithoutDollar = pamountel.textContent.replace(/\,/g, '');
+            let camount = parseFloat(stringWithoutDollar);
+
+            if ((camount+amount) < trdlim) {
+                amount += camount;
+                idx++;
+            } else {
+                break;
+            }
+        }
+
+        // setup values for slider
+        summarySlider.value = 0;
+        summarySlider.setAttribute('max', idx);
+    }
+
+    function updateSummary() {
+        // update selected contracts count
+        let checkboxes = document.querySelectorAll('.customer-select');
+        let checkboxesChecked =
+            Array.from(checkboxes) // Convert checkboxes to an array to use filter and map.
+                .filter(i => i.checked) // Use Array.filter to remove unchecked checkboxes.
+        document.querySelector('#summary-selected').textContent = checkboxesChecked.length;
+
+        // update amount
+        let paymentAmount = 0;
+        checkboxesChecked.forEach(function(checkbox) {
+           let pamountel = checkbox.closest('.customer-details').querySelector('.payout-amount');
+           let stringWithoutDollar = pamountel.textContent.replace(/\,/g, '');
+           paymentAmount += parseFloat(stringWithoutDollar);
+        });
+        document.querySelector('#summary-amount').textContent = utilFormatCurrencyAmount(paymentAmount);
+
+        // setup fee
+        let feeAmount = paymentAmount * feePercentage;
+        document.querySelector('#summary-fee').textContent = utilFormatCurrencyAmount(feeAmount);
+        feeAmount = 0; // waived
+
+        // setup total
+        let totalAmount = paymentAmount + feeAmount;
+        document.querySelector('#summary-total').textContent = utilFormatCurrencyAmount(totalAmount);
+
+        // hide/unhide remaining txt
+        let ssr = document.querySelector('#summary-slider-remaining');
+        if (checkboxesChecked.length == 0) {
+            ssr.style.visibility = 'hidden';
+        } else {
+            ssr.style.visibility = '';
+        }
+
+        // setup remaining trading amount
+        let trdlmel = document.querySelector('#trading-lmt');
+        let stringWithoutDollar = trdlmel.textContent.replace(/\,/g, '');
+        let trdlim = parseFloat(stringWithoutDollar);
+        let remainingLimit = trdlim - paymentAmount;
+        document.querySelector('#summary-slider-remaining-amount').textContent = utilFormatCurrencyAmount(remainingLimit);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setupPayoutAmounts();
+        setupTopLineAmounts();
+        setupSummary();
+        updateSummary();
+        utilFormatCurrencyAmounts();
+    })
+</script>
+</body>
+</html>
